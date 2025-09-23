@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Montserrat:wght@700&display=swap');
 
-:root {
-  --primary-color: #f289be;
-  --secondary-color: #f0ad4e;
-  --text-color: #333;
-  --light-text-color: #fff;
-  --bg-color: #ffffff;
-  --light-gray: #f8f9fa;
-  --border-color: #dee2e6;
-  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
+ 
 .landingPage {
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--text-color);

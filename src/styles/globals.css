@@ -1,23 +1,19 @@
 /* src/styles/globals.css */
 :root {
-  --primary-color: #ff69b4; 
-  --secondary-color: #f0ad4e; 
-  --success-color: #28a745; 
-  --danger-color: #dc3545;
+  /* デフォルトテーマ */
+  --primary-color: #ff69b4;
+  --secondary-color: #f0ad4e;
   --text-color: #333;
   --light-text-color: #f8f9fa;
-  --muted-text-color: #6c757d;
   --bg-color: #ffffff;
   --light-gray-bg: #f8f9fa;
   --border-color: #dee2e6;
-  --input-border-color: #ced4da;
   --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  --base-font-family: 'Noto Sans JP', sans-serif;
-  --heading-font-family: 'Montserrat', sans-serif;
-  --base-border-radius: 8px;
-  --input-border-radius: 4px;
-  --button-border-radius: 50px;
+
+  /* ランディングページ専用テーマ */
+  --lp-primary-color: #f289be;
+  --lp-light-text-color: #fff;
 }
 
 body {
