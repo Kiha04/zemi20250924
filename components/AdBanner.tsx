@@ -8,7 +8,7 @@ import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 // --- 型定義 ---
 type AdConfig = {
   id: string;
-  type: 'image' | 'video';
+  type: 'image';
   imageUrl?: string;
   videoUrl?: string;
   altText: string;
@@ -19,24 +19,23 @@ type AdConfig = {
 
 // --- 広告設定 ---
 const ADS_CONFIG: AdConfig[] = [
-  // ★★★ 実際の広告情報に書き換えてください ★★★
   {
     id: 'ad001',
     type: 'image',
-    imageUrl: '/images/ads/sample_ad_1.png', // public/images/ads/ に配置
-    altText: 'サンプル広告1: 詳細はこちら',
-    linkUrl: '/sample-link-1',
+    imageUrl: '/images/ads/meio-u-logo.png', // public/images/ads/ に配置
+    altText: '名桜大学',
+    linkUrl: 'https://www.meio-u.ac.jp/',
     isExternal: false,
-    weight: 10, // この広告が表示されやすい
+    weight: 5,
   },
   {
     id: 'ad002',
-    type: 'video',
-    videoUrl: '/videos/sample_ad_video.mp4', // public/videos/ に配置
-    altText: 'サンプル動画広告',
-    linkUrl: 'https://example.com/sample-video-ad',
-    isExternal: true,
-    weight: 5, // 画像広告より表示されにくい
+    type: 'image',
+    imageUrl: '/images/ads/meiowelnavi-logo.png',
+    altText: '名桜ウェルナビ',
+    linkUrl: 'https://www.meio-u.ac.jp/welnavi/',
+    isExternal: false,
+    weight: 5,
   },
   // 必要に応じて広告を追加
 ];
@@ -99,33 +98,7 @@ const AdBanner: React.FC = () => {
          className={styles.adBannerImage}
        />
     );
-  } else if (selectedAd.type === 'video' && selectedAd.videoUrl) {
-    adContentElement = (
-      <div className={styles.videoContainer}>
-        <video
-          ref={videoRef}
-          src={selectedAd.videoUrl}
-          className={styles.adVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-        >
-          {selectedAd.altText || '動画広告'}
-        </video>
-        <button
-          type="button"
-          onClick={toggleMute}
-          className={styles.muteButton}
-          aria-label={isMuted ? "ミュート解除" : "ミュート"}
-          title={isMuted ? "ミュート解除" : "ミュート"}
-        >
-          {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-        </button>
-      </div>
-    );
-  }
+  } 
 
   // コンテンツが正しく生成されなかった場合も null を返す
   if (!adContentElement) {

@@ -47,11 +47,22 @@
     opacity: 0.9;
   }
   
+.adBannerContainer {
+  /* このコンテナは広告全体の位置を決める役割 */
+  display: block;
+  max-width: 728px; /* 広告エリアの最大幅は維持 */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* 中の要素を中央揃えにするため */
+}
+
   .adBannerImage {
     display: block; 
-    width: 100%; 
+    width: auto; 
     height: auto; 
     max-width: 100%; 
+    display: inline-block;
     border-radius: var(--input-border-radius, 4px); 
     box-shadow: var(--card-shadow, 0 4px 8px rgba(0,0,0,0.05)); 
     margin-left: auto;
@@ -69,24 +80,7 @@
     border-radius: 3px;
     z-index: 1;
 
-    
-.videoContainer {
-  position: relative; 
-  width: 100%;
-  line-height: 0; 
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.adVideo {
-  display: block;
-  width: 100%;
-  height: auto; 
-  border-radius: var(--input-border-radius, 4px);
-  background-color: #000;
-  margin-left: auto;
-  margin-right: auto;
-}
+   
 
 
 .muteButton {
@@ -109,14 +103,7 @@
   opacity: 0.7; 
 }
 
-.muteButton:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 1;
-}
 
-.muteButton svg {
-  font-size: 1rem; 
-}
 
 .ad-container {
   width: 728px; 
