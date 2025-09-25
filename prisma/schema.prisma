@@ -2,9 +2,11 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// prisma/schema.prisma
+
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider = "postgresql" 
+  url      = env("postgresql://postgres:kiha04@db.wnijljfrvyrhlrxzbojt.supabase.co:5432/postgres")
 }
 
 
